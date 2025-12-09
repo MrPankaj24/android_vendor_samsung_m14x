@@ -8,6 +8,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_COPY_FILES += \
     vendor/samsung/m14x/proprietary/vendor/etc/SoundBoosterParam.txt:$(TARGET_COPY_OUT_VENDOR)/etc/SoundBoosterParam.txt \
     vendor/samsung/m14x/proprietary/vendor/etc/floating_feature.xml:$(TARGET_COPY_OUT_VENDOR)/etc/floating_feature.xml \
+    vendor/samsung/m14x/proprietary/vendor/etc/init/init.nfc.samsung.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.nfc.samsung.rc \
+    vendor/samsung/m14x/proprietary/vendor/etc/init/nxp.android.hardware.nfc@1.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/nxp.android.hardware.nfc@1.2-service.rc \
+    vendor/samsung/m14x/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
     vendor/samsung/m14x/proprietary/vendor/firmware/APDV_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/APDV_AUDIO_SLSI.bin \
     vendor/samsung/m14x/proprietary/vendor/firmware/AP_AUDIO_SLSI.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/AP_AUDIO_SLSI.bin \
     vendor/samsung/m14x/proprietary/vendor/firmware/SoundBoosterParam.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/SoundBoosterParam.bin \
@@ -18,6 +21,7 @@ PRODUCT_COPY_FILES += \
     vendor/samsung/m14x/proprietary/vendor/firmware/ft8720_m14x.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/ft8720_m14x.bin \
     vendor/samsung/m14x/proprietary/vendor/firmware/ft8720_m14x_ramtest.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/ft8720_m14x_ramtest.bin \
     vendor/samsung/m14x/proprietary/vendor/firmware/mfc_fw.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/mfc_fw.bin \
+    vendor/samsung/m14x/proprietary/vendor/firmware/nfc/libpn557_fw.so:$(TARGET_COPY_OUT_VENDOR)/firmware/nfc/libpn557_fw.so \
     vendor/samsung/m14x/proprietary/vendor/firmware/nt36672_m14x_csot.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nt36672_m14x_csot.bin \
     vendor/samsung/m14x/proprietary/vendor/firmware/nt36672_m14x_csot_mp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/nt36672_m14x_csot_mp.bin \
     vendor/samsung/m14x/proprietary/vendor/firmware/os.checked.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/os.checked.bin \
@@ -123,7 +127,9 @@ PRODUCT_PACKAGES += \
     libuniapi \
     libvkmanager_vendor \
     libvpl \
+    nfc_nci_nxpsn \
     vendor.samsung.hardware.keymint-V2-ndk \
+    vendor.samsung.hardware.nfc@2.0 \
     vendor.samsung.hardware.radio-V1-ndk \
     vendor.samsung.hardware.radio.bridge-V1-ndk \
     vendor.samsung.hardware.radio.channel-V1-ndk \
@@ -131,7 +137,9 @@ PRODUCT_PACKAGES += \
     vendor.samsung.hardware.radio.messaging-V1-ndk \
     vendor.samsung.hardware.radio.sim-V1-ndk \
     vendor.samsung.hardware.thermal@1.0 \
+    nxp.android.hardware.nfc@1.2-service.xml \
     cass \
     android.hardware.security.keymint-service.samsung \
     gpsd \
+    nxp.android.hardware.nfc@1.2-service \
     rild
